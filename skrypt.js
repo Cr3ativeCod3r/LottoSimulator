@@ -45,7 +45,8 @@ var hasla = [
 
 var haslo = hasla[Math.floor(Math.random() * hasla.length)];
 haslo = haslo.toLocaleUpperCase();
-
+var yes = new Audio("yes.wav");
+var no = new Audio("no.wav");
 var dlugosc = haslo.length;
 var haslo1 = "";
 var litery = new Array(35);
@@ -180,6 +181,7 @@ function check(nr) {
   }
 
   if (trafiona == true) {
+    yes.play();
     var ele = "lit" + nr;
     document.getElementById(ele).style.background = "#003300";
     document.getElementById(ele).style.color = "lightgreen";
@@ -187,6 +189,7 @@ function check(nr) {
     document.getElementById(ele).style.cursor = "default";
     write();
   } else {
+    no.play();
     var ele = "lit" + nr;
     document.getElementById(ele).style.background = "#330000";
     document.getElementById(ele).style.color = "red";
