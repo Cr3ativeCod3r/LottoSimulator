@@ -128,7 +128,7 @@ function resetGame()
   haslo1 = "";
   die = 0;
 
-  var obraz = "img/s0.jpg";
+  var obraz = "s0.jpg";
   document.getElementById("szubienica").innerHTML = '<img src="' + obraz + '" alt="szubienica" />';
 
   for (i = 0; i < dlugosc; i++) {
@@ -195,7 +195,7 @@ function check(nr) {
     document.getElementById(ele).setAttribute("onclick", ";");
 
     die++;
-    var obraz = "img/s" + die + ".jpg";
+    var obraz = "s" + die + ".jpg";
     document.getElementById("szubienica").innerHTML =
       '<img src="' + obraz + '" alt="chuj" />';
   }
