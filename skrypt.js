@@ -104,7 +104,7 @@ function resetGame()
  
   ile++;
   counter++
-  if(ile>=42)
+  if(ile>=21)
   {
     document.getElementById("szubienica").innerHTML ="";
     document.getElementById("board").innerHTML ="";
@@ -114,7 +114,7 @@ function resetGame()
   }
 
   //IF NOT END
-  if(ile<=41)
+  if(ile<=20)
   {
   var newHaslo = hasla[Math.floor(Math.random() * hasla.length)]; // nowe hasło
 
@@ -207,7 +207,7 @@ function check(nr) {
   {
     document.getElementById("alf").innerHTML =
       "DOBRZE!!!" +
-      '<br/><br/><span class="reset" onclick="resetGame()">NASTEPNA<br>TO BYŁA '+counter+'/41</span>'
+      '<br/><br/><span class="reset" onclick="resetGame()">NASTEPNA<br>TO BYŁA '+counter+'/20</span>'
     good++;
   }
 
@@ -215,7 +215,7 @@ function check(nr) {
     document.getElementById("alf").innerHTML =
       "POPRAWNA ODPOWIEDZ: " +
       haslo +
-      '<br/><br/><span class="reset1" onclick="resetGame()">NASTEPNA<br>TO BYŁA '+counter+'/41</span>'
+      '<br/><br/><span class="reset1" onclick="resetGame()">NASTEPNA<br>TO BYŁA '+counter+'/20</span>'
       bad++;
   }
 }
