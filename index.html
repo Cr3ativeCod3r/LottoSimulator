@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+
+	<meta charset="utf-8">
+	<title>Lotto</title>
+	<meta name="description" content="JS Memory Game inspired by Gwent">
+	<meta name="keywords" content="javascript, jQuery, game, gwent, memory">
+	<meta name="author" content="MZ">
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" href="styl.css">
+    <link rel="stylesheet" href="dodawanie.css">
+    <link rel="stylesheet" href="kulki.css">
+	<script src="skrypt.js"></script>
+    <script src="hajs.js"></script>
+    <script src="win.js"></script>
+</head>
+<body>
+
+<div id="con">
+    
+<!--TOP---------------------------------->
+    <div id="top"><p>Lotto Symulator</p>
+        
+        <div id="modal" class="overlay" style="display: none;">
+            <div class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h5 style="color: black;">Prawdopodobieństwo</h5>
+                <p class="pr">6 -  (0,0000072%) + 1.ooo,ooo zł</p>
+                <p class="pr">5 - (0,0018%) + 5.000zł</p>
+                <p class="pr">4 - (0,097%) + 150zł</p>
+                <p class="pr">3 - (1,77%) + 25zł</p>
+                <p class="pr">2 - (13,2%) + 0zł</p>
+                <p class="pr">1 - (41,3%) + 0zł</p>
+                <p class="pr">0 - (41,3%) + 0zł</p>
+               
+            </div>
+        </div>
+    </div>
+
+<!--RIGHT---------------------------------->
+    <div id="left">
+
+        <div id="stats">
+           <table id="sts">
+            <tr>
+            <td>losowanie:<p id="nrgr">0</p></td>    
+            <td>1<p id="one">0</p></td> 
+            <td>2<p  id="two">0</p> </td>
+            <td>3<p id="three">0</p></td>
+            <td>4<p id="four">0</p></td>
+            <td>5<p id="five">0</p></td>
+            <td>6<p id="six">0</p></td>
+            </tr>
+           </table>
+           
+        </div>
+        <div id="win"></div>
+
+    </div>
+
+<!--LEFT---------------------------------->
+    <div id="right">
+        <div class="lewe">
+            <div class="losowania">
+              1. Losowania na sekundę:
+            </div>
+            <div class="przyciski">
+              <button id="button1" class="speed" onclick="sped(this, 1000)">1</button>
+              <button id="button2" class="speed" onclick="sped(this, 300)">3</button>
+              <button id="button3" class="speed" onclick="sped(this, 100)">10</button>
+              <button id="button4" class="speed active" onclick="sped(this, 1)">100</button>
+            </div>
+          </div>
+          
+<!--2---------------------------------->
+
+        <div class="lewe">
+            <button onclick="clearr()" style="cursor:pointer" class="moje2" >clear</button>
+            <button onclick="auto()" style="cursor:pointer" class="moje2" >auto</button>
+            <div class="moje"></div>
+            <div class="moje"></div>
+            <div class="moje"></div>
+            <div class="moje"></div>
+            <div class="moje"></div>
+            <div class="moje"></div>
+        </div>
+
+        <div id="num" class="lewe">
+           
+        </div>
+
+        <div id="wyg" class="lewe" style="display: none;">
+          <div style="margin-right: 22px;"> Maszyna:</div>
+            <div class="wygrane"></div>
+            <div class="wygrane"></div>
+            <div class="wygrane"></div>
+            <div class="wygrane"></div>
+            <div class="wygrane"></div>
+            <div class="wygrane"></div>
+        </div>
+
+<!--3---------------------------------->
+
+        <div >
+            <div class="lewe">
+       
+            
+             <table class="my-table">
+                <tr>
+                  <td style="width: 200px;">Wydane:</td>
+                  <td><p id="wydanee" class="g">0 zł</p></td>
+                </tr>
+                <tr>
+                  <td>Wygrane:</td>
+                  <td><p id="wygrane" class="g">0 zł</p></td>
+                </tr>
+                <tr>
+                  <td>Bilans:</td>
+                  <td><p id="bilans" class="g">0 zł</p></td>
+                </tr>
+                <tr>
+                  <td>Środki:</td>
+                  <td ><p id="srodkii" class="g">0 zł</p></td>
+                </tr>
+              </table></div>
+              
+       
+
+        </div>
+
+<!--4---------------------------------->
+ 
+        <div class="lewe">
+            3. Dodaj pieniądze:
+            <button class="monety" onclick="addm(10)">10zł</button>
+            <button class="monety" onclick="addm(100)">100zł</button>
+            <button class="monety" onclick="addm(1000)">1000zł</button>
+            <button class="monety" onclick="addm(100000)">100.000zł</button>
+        </div>
+
+ <!--5---------------------------------->  
+    
+        <div class="lewe">
+           <div class="losowania2"> 4. Zatrzymaj/start</div>
+            <button id="change" onclick="game()">START</button>
+            
+            
+        </div>
+   
+    </div>
+  
+    
+
+</div>
+
+  
+<footer>
+    <div class="footer-content">
+        <button class="pp" onclick="openModal()">Zasady</button>
+      <p>&copy; 2023 Kamil Banaszek. Wszelkie prawa zastrzeżone.</p>
+     
+    </div>
+  </footer>
+</body>

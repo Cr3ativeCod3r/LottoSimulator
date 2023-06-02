@@ -1,0 +1,104 @@
+body
+{
+        font-family: 'Fjalla One', sans-serif;
+}
+
+#num {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .liczba {
+    flex: 15%; /* Możesz dostosować szerokość diva tutaj */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(68, 68, 106);
+    cursor: pointer;
+    color: white;
+    border: solid 1px black;
+  }
+  .liczba:hover
+  {
+       background-color: blue;
+  }
+
+
+#win
+{
+    background-color: rgb(199, 186, 222);
+    width: 445px;
+    height:auto;
+    margin-left: auto;
+    margin-right: auto;
+   
+   
+}
+#stats
+{
+    background-color: rgb(185, 112, 112);
+    width: 100%;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+   
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); /* Cień */
+    transform: translateY(-5px); /* Przesunięcie wertykalne */
+    transition: transform 0.3s ease-in-out; /* Płynne przejście */
+    
+   
+
+}
+#sts td
+{
+  border: solid rgb(111, 58, 58) 1px;
+width: 60px;
+text-align: center;
+}
+#sts
+{
+        height: 30px;
+        margin-top: 15px;
+        background-color: rgb(157, 124, 84);
+}
+#change{
+        background-color: rgb(210, 234, 210); font-weight: bold; width: 55px;
+height: 55px; border-radius: 15% ; text-align: center;cursor: pointer; margin-left: 50px;
+
+}#change:hover{ background-color: rgb(84, 74, 60); color: white;}
+
+footer {
+        background-color: #ede0e0;
+        padding: 10px;
+        text-align: center;
+        font-size: 14px;
+        margin-right: 300px;
+        width: 480px;
+        height: 50px;
+        float: right;
+      }
+      
+      .footer-content {
+     
+        margin: 0 auto;
+      }
+
+      .pp
+      {
+        background-color: rgb(143, 203, 183);
+        font-weight: bold;
+        border-radius: 10px;
+        cursor: pointer;
+      }.pp:hover{background-color: aliceblue;}
+      
+
+
+.pr 
+{
+        color: rgb(18, 111, 22);
+        text-align: left;
+        font-size: 20px;
+        font-weight: bold;
+}
