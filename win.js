@@ -115,7 +115,8 @@ function czek()
       { tr++;
         wygrane=wygrane+25;
         document.getElementById("three").innerHTML = tr;
-       // wstaw.innerHTML += '<div class="plus">' + "+25zł" + '</div>';   
+        wstaw.innerHTML += '<div class="plus">' + "+25zł" + '</div>';   
+       games++;
         
 
       }
@@ -151,7 +152,7 @@ function czek()
         
       }
 
-      if (repeatedNumbers.length > 3) 
+      if (repeatedNumbers.length > 2) 
       {
         
  
