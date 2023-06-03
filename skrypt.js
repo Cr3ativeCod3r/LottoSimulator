@@ -2,6 +2,7 @@ var picked=0;
 var numbers = new Array(50);
 var screen = [];
 var robot = [];
+var neww=1000;
 
 
 
