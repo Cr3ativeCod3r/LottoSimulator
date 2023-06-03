@@ -84,7 +84,7 @@ function auto()
         }
 }
 
-var speed=1;
+var speed=1000;
 
 function sped(clickedButton,y)
 {
