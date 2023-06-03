@@ -95,8 +95,9 @@ function sped(clickedButton,y)
     buttons[i].classList.remove("active");
   }
   clickedButton.classList.add("active");
-  speed=y;
+  neww=y;
 }
+
 
 
 function getRandomColor() 
