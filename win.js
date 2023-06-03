@@ -50,7 +50,7 @@ function game()
       if (robot.length < 6) 
       {
         insertNumbers();
-       
+         speed=neww;
         setTimeout(clearNumbers, speed);
       }
     }
