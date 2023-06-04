@@ -52,8 +52,8 @@ function game()
     {
       robotl[j].innerHTML = "";
     }
-    wydane=wydane+2;
-    srodki=srodki-2;
+    wydane=wydane+3;
+    srodki=srodki-3;
     updates();
   }
 
